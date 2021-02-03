@@ -1,4 +1,16 @@
-"""Functions for checking validity of 3d board game setting."""
+"""Functions for checking validity of 3d board game setting.
+
+    Functions
+    ---------
+        read_input - read game board file from path
+        check_not_finished_board - check if skyscraper board is not finished
+        check_uniqueness_in_rows - check buildings of unique height in each row
+        check_uniqueness_in_columns - check buildings of unique height in each column
+        check_visibility - check visibility for a given line of houses from both sides
+        check_horizontal_visibility - check row-wise visibility
+        check_vertical_visibility - check column-wise visibility
+        check_skyscrapers - check if the board of skyscrapers is valid
+"""
 
 
 def read_input(path: str):
@@ -75,7 +87,7 @@ def check_uniqueness_in_rows(board: list):
 
 def check_uniqueness_in_columns(board: list):
     """
-    Check buildings of unique height in each row.
+    Check buildings of unique height in each column.
 
     Return True if buildings in all columns column have unique height, False otherwise.
 
@@ -188,7 +200,7 @@ def check_horizontal_visibility(board: list):
 
 def check_vertical_visibility(board: list):
     """
-    Check row-wise visibility (left-right and vice versa)
+    Check column-wise visibility (left-right and vice versa)
 
     Return True if all vertical hints are satisfiable,
      i.e., for line 412453* , hint is 4, and 1245 are the four buildings
